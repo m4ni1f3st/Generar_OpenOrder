@@ -1,0 +1,10 @@
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\bin\Debug\Generar_OpenOrder.exe.config
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\bin\Debug\Generar_OpenOrder.exe
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\bin\Debug\Generar_OpenOrder.pdb
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.csprojAssemblyReference.cache
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.Form1.resources
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.Properties.Resources.resources
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.csproj.GenerateResource.cache
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.csproj.CoreCompileInputs.cache
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.exe
+C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Debug\Generar_OpenOrder.pdb
