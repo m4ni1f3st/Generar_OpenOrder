@@ -7,3 +7,13 @@ C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Release\G
 C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.csproj.CoreCompileInputs.cache
 C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.exe
 C:\Users\dfuentes\source\repos\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.pdb
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\bin\Release\Generar_OpenOrder.exe.config
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\bin\Release\Generar_OpenOrder.exe
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\bin\Release\Generar_OpenOrder.pdb
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.csprojAssemblyReference.cache
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.Form1.resources
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.Properties.Resources.resources
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.csproj.GenerateResource.cache
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.csproj.CoreCompileInputs.cache
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.exe
+C:\Users\dfuentes\Documents\GitHub\Generar_OpenOrder\Generar_OpenOrder\obj\Release\Generar_OpenOrder.pdb

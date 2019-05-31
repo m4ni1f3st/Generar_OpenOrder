@@ -18,6 +18,45 @@ namespace Generar_OpenOrder
             InitializeComponent();
         }
 
+        private string consultar_openorder(string orden)
+        {
+            DataTable tabla = new DataTable(); // El resultado lo guardaremos en una tabla
+            string kopr = string.Empty;
+            string conex =
+            "Data Source =" + this.txt_instancia.Text + "; Initial Catalog= " + this.txt_base.Text + ";User ID =" + this.txt_usuario.Text + ";Password=" + this.txt_contrasena.Text + ";Trusted_Connection = False;";
+            SqlConnection operativa = new SqlConnection(conex);
+            operativa.Open();
+            //if (operativa.State == ConnectionState.Open)
+            //{
+            //    MessageBox.Show("Conexión Establecida a base operativa: " + this.txt_base.Text, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    Grabar.grabar("Conexión Establecida a base operativa: " + this.txt_base.Text);
+            //}
+            SqlDataAdapter AdaptadorTabla = new SqlDataAdapter(Libreria.consultar_openorder(orden), operativa); // Usaremos un DataAdapter para leer los datos
+            AdaptadorTabla.Fill(tabla);// Llenamos la tabla con los datos leídos
+            
+            if (tabla.Rows.Count == 0)
+            {
+                kopr = "";
+            }
+            else
+            {
+                kopr = tabla.Rows[0]["IDEN"].ToString();//guardo informacion en variables
+            }
+            if (kopr == "")
+            {
+                SqlCommand comando = new SqlCommand(Libreria.generar_openorder(orden), operativa);
+                SqlDataReader registros_nombre = comando.ExecuteReader();
+                Grabar.grabar("Se guardó OpenOrder para: " + orden);
+            }
+            else
+            {
+                Console.WriteLine("La orden: " + orden + " ya existe.");
+                Grabar.grabar("La orden: " + orden + " ya existe.");
+
+            }
+            return kopr;
+        }
+
         private void btn_ejecutar_Click(object sender, EventArgs e)
         {
             try
@@ -31,44 +70,17 @@ namespace Generar_OpenOrder
                 {
                     MessageBox.Show("Conexión Establecida a base operativa: " + this.txt_base.Text, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Grabar.grabar("Conexión Establecida a base operativa: " + this.txt_base.Text);
+                    operativa.Close();
                 }
-                
-                operativa.Close();
-
-                DataTable tabla = new DataTable(); // El resultado lo guardaremos en una tabla
-                string kopr = string.Empty;
-
+                else
+                {
+                    MessageBox.Show("No se pudo establecer conexión con: " + txt_base.Text);
+                }
                 for (int i = 0; i < txt_openorder.Lines.Length; i++)
                 {
-                    operativa.Open();
-                    string orden = txt_openorder.Lines[i];
-                    SqlDataAdapter AdaptadorTabla = new SqlDataAdapter(Libreria.consultar_openorder(orden), operativa); // Usaremos un DataAdapter para leer los datos
-                    AdaptadorTabla.Fill(tabla);// Llenamos la tabla con los datos leídos
-                    if (tabla.Rows.Count == 0)
-                    {
-                        kopr = "";
-                    }
-                    else
-                    {
-                        kopr = tabla.Rows[0]["IDEN"].ToString();//guardo informacion en variables
-                    }
-                    if (kopr =="")
-                    {
-                        SqlCommand comando = new SqlCommand(Libreria.generar_openorder(orden), operativa);
-                        SqlDataReader registros_nombre = comando.ExecuteReader();
-                        Grabar.grabar("Se guardo openorder para: " + orden);
-                    }
-                    else
-                    {
-                        Console.WriteLine("La orden: " + orden + " ya existe.");
-                        Grabar.grabar("La orden: " + orden + " ya existe.");
-
-                    }
-                    if (operativa.State == ConnectionState.Open)
-                    {
-                        operativa.Close();
-                    }
+                    consultar_openorder(txt_openorder.Lines[i].ToString());
                 }
+
                 MessageBox.Show("Proceso terminado.");
                 Grabar.grabar("Proceso Terminado");
             }
